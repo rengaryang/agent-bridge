@@ -1,0 +1,14 @@
+node_modules/
+dist/
+coverage/
+*.acx
+.abridge/
+*.tmp
+*.zip
+*.tgz
+runtimes/*/package/
+.abridge-native/
+.DS_Store
+# Reproducible upstream schemas: keep local, regenerate from the target Codex version.
+docs/codex-schema/
+docs/codex-schema-experimental/

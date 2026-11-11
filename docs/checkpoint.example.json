@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "goals": ["构建跨 Pi、OMP、Codex 的上下文与结论迁移工具"],
+  "constraints": ["不重放历史命令或工具", "不迁移凭据与已批准权限"],
+  "background": ["目标用户在本地编码 agent 之间切换工作"],
+  "facts": [],
+  "decisions": ["采用语义检查点迁移，完整归档作为独立选项"],
+  "artifacts": ["README.md"],
+  "progress": [],
+  "nextSteps": ["核实目标工作区与当前可用模型后继续"],
+  "risks": ["检查点陈述尚需人工复核；产物路径不代表文件存在或测试通过"],
+  "reviewRequired": true,
+  "extraction": "explicit"
+}

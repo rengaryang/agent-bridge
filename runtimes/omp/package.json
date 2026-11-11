@@ -1,0 +1,10 @@
+{
+  "name": "agent-bridge-omp-runtime",
+  "private": true,
+  "overrides": { "zod": "4.6.6" },
+  "dependencies": {
+    "@oh-my-pi/pi-coding-agent": "18.16.0",
+    "@oh-my-pi/pi-natives-darwin-arm64": "18.16.0",
+    "@oven/bun-darwin-aarch64": "1.4.4"
+  }
+}

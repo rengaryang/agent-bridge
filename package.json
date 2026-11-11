@@ -1,0 +1,36 @@
+{
+  "name": "agent-bridge",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "description": "Local-first cross-agent session migration CLI",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "bin": {
+    "abridge": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "check": "npm run typecheck && npm run build && npm test",
+    "start": "node dist/cli.js",
+    "format": "prettier --write 'src/**/*.ts' 'tests/**/*.ts'",
+    "format:check": "prettier --check 'src/**/*.ts' 'tests/**/*.ts'",
+    "setup:native": "node scripts/setup-native.mjs",
+    "test:native": "npm run build && vitest run tests/native.test.ts",
+    "test:offline": "vitest run tests/adapters.test.ts tests/bundle.test.ts tests/cli.test.ts tests/snapshot-migration.test.ts"
+  },
+  "dependencies": {
+    "ajv": "8.20.0",
+    "commander": "15.1.0",
+    "fflate": "0.8.3"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.5",
+    "prettier": "3.6.2",
+    "typescript": "5.9.3",
+    "vitest": "5.1.0"
+  }
+}
